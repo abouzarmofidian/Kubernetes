@@ -9,15 +9,14 @@ data:
     db.createCollection('products');
 
     db.products.insertMany(
-    [
-      {
-        "name":"iphone",
-        "price":"1000"
-      },
-      {
-        "name":"ipad",
-        "price":"800"
-      }
-    ])
-	      
-    
+      [
+        {
+          "name":"iphone",
+          "price":"1000"
+        },
+        {
+          "name":"ipad",
+          "price":"800"
+        }
+      ]
+    )
