@@ -3,17 +3,13 @@ kind: PersistentVolume
 metadata:
   name: mysql-pv
 spec:
-  persistentVolumeReclaimPolicy: Recycle
-  storageClassName: local-storage
-  claimRef:
-    name: mysql-volume
-    namespace: default
+  storageClassName: manual
   capacity:
     storage: 1Gi
   accessModes:
     - ReadWriteOnce
-  local:
-    path: /mnt
+  hostPath:
+    path: "/mnt"
   nodeAffinity:
     required:
       nodeSelectorTerms:
